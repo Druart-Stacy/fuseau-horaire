@@ -88,3 +88,29 @@ body.appendChild(RussieParagraph);
 body.appendChild(BruxellesParagraph);
 
 document.body.appendChild(body);
+
+
+
+
+// Obtenir la date actuelle
+let date = new Date();
+
+// Obtenir le jour de la semaine (0 = Dimanche, 1 = Lundi, ..., 6 = Samedi)
+let weekday = date.toLocaleDateString('en-US', { weekday: 'long' });
+
+// Obtenir le jour du mois
+let dayOfMonth = date.getDate();
+
+// Obtenir le mois actuel (0 = janvier, 1 = février, ..., 11 = décembre)
+let month = date.getMonth() + 1;
+
+// Afficher le jour de la semaine, le jour du mois et le mois dans les éléments HTML correspondants
+document.getElementById('weekday').textContent = weekday;
+document.getElementById('dayOfMonth').textContent = dayOfMonth;
+document.getElementById('month').textContent = month;
+
+
+
+
+
+
